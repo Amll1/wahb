@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lan="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>WAHB LOGIN</title> 
+        <link rel="stylesheet" href="login.css">
+        
+    </head>
+    <body>
+        <div class="navbar2">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+            <div>
+        <form class ="box" action="login.html" method="post">
+            <h1>
+                login
+            </h1>
+            <input type="text" name="" placeholder="enter your email" id="email">
+            <input type="password" name="" placeholder="enter password" id="password">
+            <button id="login">login</button>  
+        </form>
+
+       <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js"></script>
+       <script>
+       const firebaseConfig = {
+        apiKey: "AIzaSyBm4j5cGIRWKLm_2fUMBxgpJHxyhbwnU9A",
+        authDomain: "manal-5ad04.firebaseapp.com",
+        projectId: "manal-5ad04",
+        storageBucket: "manal-5ad04.appspot.com",
+        messagingSenderId: "540988102189",
+        appId: "1:540988102189:web:2b799274659f87aaeccaa4"
+      };
+      
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);</script>
+    </body>
+</html>

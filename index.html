@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WAHB.</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="styles.css" type="text/css" rel="Stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/95dc93da07.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+    <div id="header-hero-container">
+        <header>
+            <div class="flex container">
+                <a id="logo" href="#">WAHB.</a>
+                <nav>
+                   
+
+                    <ul id="nav-menu">
+                        <li><a href="#H" class="active">Home</a></li>
+                        
+                        <li><a href="#A">Target Group</a></li>
+                        <li><a href="#AB">Agents</a></li>
+                        <li><a href="#N">Our Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <!--احتياط لو حاولتو في البتن اللي سويته وماضبط انا سويته في البار الي فوقه ك حل اخر -->
+                        <li><a href="homev.html">Login for volenteer</a></li>
+                        <li><a href="retrivebutton.html">Show Donation</a></li>
+                        <!--stop-->
+                        <li id="close-flyout"><span class="fas fa-times"></span></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <section id="H">
+            <div class="fade"></div>
+            <div class="hero-text">
+               <p>
+                        together we volunteer together 
+                       <br> we build the civilization of a nation
+                </p>
+            </div>
+            
+        </section>
+    </div>
+    
+
+    <section id="A">
+        <div class="container">
+            <h2>target groub</h2>
+            <div class="flex">
+                <div>
+                    <span class="fas fa-solid fa-users"></span>
+                    <h4>Volenteer.</h4>
+                    <p>Providing all the needs of clothes, food, appliances and many more.</p>
+                </div>
+                <div>
+                    <span class="fas fa-solid fa-paw"></span>
+                    <h4>Needy.</h4>
+                    <p>Ease of displaying the necessary requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <section id="AB">
+        <div class="container">
+            <h2>Agents</h2>
+           
+
+            <div class="flex">
+                <div class="card">
+                    <img src="amal.jpg" alt="amal" />
+                    <h3>Amal AL-tabeeli</h3>
+                    <p>Web Developer</p>
+                </div>
+
+                <div class="card">
+                    <img src="jawaher.jpg" alt="jawaher" />
+                    <h3>Jawaher AL-qhtani</h3>
+                    <p>Web Developer</p>
+                </div>
+
+                <div class="card">
+                    <img src="manal.jpg" alt="manal" />
+                    <h3>Manal AL-huthaifi</h3>
+                    <p>Web Developer</p>
+                </div>
+
+               
+            </div>
+        </div>
+    </section>
+    <section class="our-service" id="N"> 
+        <div class="title">
+            <h1>our services</h1>
+        </div>
+             
+        <div class="contaniner-service">
+            <div class="box-service">
+                <img src="heart.svg" class="ser-logo">
+                <br>
+                <br>
+                <h3>Donation service</h3>
+                <p>be one of the most generous volunteers</p>
+            </div>
+            <div class="box-service">
+                <img src="live-chat.svg" class="ser-logo">
+                <br>
+                <br>
+                <h3>Direct communication service</h3>
+                <p>Knowing the user's need</p>
+            </div>
+            <div class="box-service">
+                <img src="application.svg" class="ser-logo">
+                <br>
+                <br>
+                <h3>Easy access service for the needy</h3>
+                <p>Divide the donation categories for easy access to them faster</p>
+            </div>
+            <div class="box-service">
+                <img src="help.svg" class="ser-logo">
+                <br>
+                <br>
+                <h3>Volunteer Service</h3>
+                <p>You can register to join our volunteer team. </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="flex container">
+            <div class="footer-about">
+                <h5>About Web</h5>
+                <p>With the development of technology in all fields, we should think about idea help people to help each other , help anyone in need or experiencing a crisis , providing food and clothes for poor families easily and helping volunteers to reach all people easily.</p>
+            </div>
+
+            <div class="footer-subscribe">
+                <h5 class="follow-us">Follow Us</h5>
+                <ul>
+                    <li><a href="https://twitter.com/wahbteam?s=11&t=0nyq48YWsJFkRct-dnnXxw"><span class="fab fa-twitter"></span></a></li>
+                    <li><a href="https://instagram.com/wahbteam?utm_medium=copy_link"><span class="fab fa-instagram"></span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <small>
+            Copyright &copy; 2022 All rights reserved | <span class="fa fa-heart"></span> by <a href="#">WAHB</a>
+        </small>
+    </footer>
+
+    <script>
+        $(function () {
+            let headerElem = $('header');
+            let logo = $('#logo');
+            let navMenu = $('#nav-menu');
+            let navToggle = $('#nav-toggle');
+
+           $('#properties-slider').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                prevArrow: '<a href="#" class="slick-arrow slick-prev">previous</a>',
+                nextArrow: '<a href="#" class="slick-arrow slick-next">next</a>',
+                responsive: [
+                    {
+                        breakpoint: 1100,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            infinite: true,
+                        }
+                    },
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            infinite: true,
+                        }
+                    },
+                    {
+                        breakpoint: 530,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                        }
+                    }
+                ]
+           });
+
+           $('#testimonials-slider').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow: '<a href="#" class="slick-arrow slick-prev"><</a>',
+                nextArrow: '<a href="#" class="slick-arrow slick-next">></a>'
+           });
+
+           navToggle.on('click', () => {
+               navMenu.css('right', '0');
+           });
+
+           $('#close-flyout').on('click', () => {
+                navMenu.css('right', '-100%');
+           });
+
+           $(document).on('click', (e) => {
+               let target = $(e.target);
+               if (!(target.closest('#nav-toggle').length > 0 || target.closest('#nav-menu').length > 0)) {
+                   navMenu.css('right', '-100%');
+               }
+           });
+
+           $(document).scroll(() => {
+               let scrollTop = $(document).scrollTop();
+
+               if (scrollTop > 0) {
+                   navMenu.addClass('is-sticky');
+                   logo.css('color', '#123');
+                   headerElem.css('background', '#fff');
+                   navToggle.css('border-color', '#000');
+                   navToggle.find('.strip').css('background-color', '#000');
+               } else {
+                   navMenu.removeClass('is-sticky');
+                   logo.css('color', '#fff');
+                   headerElem.css('background', 'transparent');
+                   navToggle.css('bordre-color', '#fff');
+                   navToggle.find('.strip').css('background-color', '#fff');
+               }
+
+               headerElem.css(scrollTop >= 200 ? {'padding': '0.5rem', 'box-shadow': '0 -4px 10px 1px #999'} : {'padding': '1rem 0', 'box-shadow': 'none' });
+           });
+
+           $(document).trigger('scroll');
+        });
+
+        
+    </script>
+    <script type="text/javascript" src="https://popupsmart.com/freechat.js"></script><script> window.start.init({ title: "Hi there ✌️", message: "How may we help you? Just send us a message now to get assistance.", color: "rgba(69, 99, 100, 0.9)", position: "right", placeholder: "Enter your message", withText: "Write with", viaWhatsapp: "Or write us directly via Whatsapp", gty: "Go to your", awu: "and write us", connect: "Connect now", button: "Write us", device: "everywhere", logo: "https://d2r80wdbkwti6l.cloudfront.net/jrkKUootwvXUHkJdfLbdoBORK8Cdwi2E.jpg", person: "https://d2r80wdbkwti6l.cloudfront.net/dLnqUnAG4Yiu6ecCBTFMbE3BODpUhmZl.jpg", services: [{"name":"telegram","content":"manalalhuthaifi"}]})</script>
+</body>
+</html>

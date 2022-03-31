@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="Stylesheet" href="style.css">
+        <title>
+            wahb
+        </title>
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+           <a class="navbar-brand" href="#">WAHB</a>
+        
+            <a class="nav-link" href="#"id ="clothes">CLOTHES</a>
+            <a class="nav-link" href="#" id="food" >FOOD</a>
+            <a class="nav-link" href="#" id="animal care">ANIMAL CARE</a>
+            <a class="nav-link" href="#" id="other" >OTHER</a>
+           
+            
+            <div dir="rtl" class="collapse navbar-collapse" id="navbarSupportedContent">
+              <form class="form-inline my-2 my-lg-0">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-1">
+                      <a id ="userlink"  class="btn btn-info" href="">Fullname</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a id ="signoutlink"  class="btn btn-info" href="">sign out</a>
+                      </li>
+                  </ul>
+              </form>
+            </div>
+          </nav>
+          <h3 style="text-align: center;" id="hh"></h3>
+          <form dir="ltr" class="cssform"  id="formUser">
+             <label  type="text" id="username"></label>
+             <label  type="text" id="email"></label>
+             <label  type="text" id="phone"></label>
+             <label  type="text" id="region"></label>
+ 
+          </form>
+         
+
+          <script>
+          
+            
+            let userlink = document.getElementById('userlink');
+            let signoutlink = document.getElementById('signoutlink');
+            let header = document.getElementById('hh');
+            var currentUser = null;
+            let name1 = document.getElementById('username');
+            let email1 =document.getElementById('email');
+            let phone1=document.getElementById('phone');
+            let region1 = document.getElementById('region');
+            let form = document.getElementById('formUser');
+            let clothess=document.getElementById('clothes');
+            let food=document.getElementById('food');
+            let animalcare=document.getElementById('animal care');
+            let other=document.getElementById('other');
+            
+            
+             
+            function getUsername(){
+              let keepLoggedIn = localStorage.getItem("keepLoggedIn");
+              if(keepLoggedIn == "yes"){
+                currentUser = JSON.parse(localStorage.getItem('user'));
+              }
+              else{
+                currentUser = JSON.parse(sessionStorage.getItem('user'));
+              }
+
+            }
+            function Signout(){
+              sessionStorage.removeItem('user');
+              localStorage.removeItem('user');
+              localStorage.removeItem('keepLoggedIn');
+              window.location = "homev.html";
+
+            }
+            window.onload = function(){
+         
+              getUsername();
+              if(currentUser == null){
+                userlink.innerText = "Create New Account";
+                userlink.classList.replace("nav-link","btn");
+                userlink.classList.add("btn-primary");
+                userlink.href = "signinv.html";
+
+                signoutlink.innerText = "Login";
+                signoutlink.classList.replace("nav-link","btn");
+                signoutlink.classList.add("btn-success");
+                signoutlink.href = "loginv.html";
+                form.classList.remove("cssform");
+
+
+              }
+              
+              else{
+              
+              
+                userlink.innerText = currentUser.username;
+                header.innerText = "welcome";
+                
+                name1.innerText = currentUser.fullname;
+                email1.innerText = currentUser.email;
+                phone1.innerText = currentUser.phone;
+                region1.innerText = currentUser.region;
+                
+                userlink.classList.replace("btn","nav-link");
+                userlink.classList.add("btn-primary");
+                userlink.classList.replace("false","true");
+                userlink.href = "homev.html";
+                clothess.href="Donate_clothes_.html";
+                food.href="Donate_Food_.html";
+                animalcare.href="Donate_animal.html";
+                other.href="Donate_Others.html";
+                
+
+                signoutlink.innerText = "Sign Out";
+                signoutlink.classList.replace("btn","nav-link");
+                signoutlink.classList.add("btn-success");
+                signoutlink.href = "javascript:Signout()";
+              
+
+
+              }
+            }
+          
+          </script>
+    </body>
+</html>

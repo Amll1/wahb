@@ -1,0 +1,92 @@
+.navbar2 ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 30px 1350px;
+    position: relative;
+    flex-wrap: wrap;
+}
+.navbar2 ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+.navbar2 ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #f1d63a;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 00.5s;
+}
+.navbar2 ul li:hover:after{
+width: 100%;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    /* background-image: url(image9.jpg);*/
+    background-size:cover;
+    background-position:center;
+    min-height: 100vh;;
+    background:rgba(69, 99, 100, 0.9);
+    flex-wrap: wrap;
+    
+}
+.box{
+    width: 300px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0.4);
+    text-align: center;
+    flex-wrap: wrap;
+}
+.box h1{
+    color:white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.box input[type="text"],.box input[type="password"]{
+   border: 0;
+   background: none;
+   display: block;
+   margin: 20px auto;
+   text-align: center;
+   border: 3px solid #0367fd;
+   padding: 14px 10px;
+   width: 220px;
+   outline: none;
+   color:white;
+   border-radius: 24px;
+   transition: 0.25px;
+
+
+}
+
+.box input[type="text"]:focus,.box input [type="password"]:focus{
+    width: 270px;
+    border-color: #f1d63a;
+
+}
+
+.box input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #f1d63a;
+    padding: 14px 35px;
+    outline: none;
+    color:white;
+    border-radius: 24px;
+    transition: 0.25px;
+    cursor: pointer;
+}
+.box input[type="submit"]:hover{
+   background: #f1d63a;
+}
